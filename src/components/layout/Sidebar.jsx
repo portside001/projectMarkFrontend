@@ -1,4 +1,9 @@
-const Sidebar = ({isOpen}) => {
+import { SidebarContext } from "./SidebarContext";
+import { useContext } from "react";
+
+const Sidebar = () => {
+    const {isOpen}=useContext(SidebarContext);
+    console.log("Sidebar context isOpen:", isOpen);
   return (
     <>
       {/* <button

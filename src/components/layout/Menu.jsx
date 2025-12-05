@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-const Menu = ({isOpen,toggleSidebar}) => {
-//   const [isOpen, setIsOpen] = useState(true);
-//   const toggleSidebar = () => {
-//     setIsOpen(!isOpen);
-//   };
+import React, { useContext, useState } from "react";
+import { SidebarContext } from "./SidebarContext";
+const Menu = () => {
+const {isOpen:isOpen,toggleSidebar:toggleSidebar}=useContext(SidebarContext);
+console.log("Menu context isOpen:", isOpen);
   return (
     <>
       <button
