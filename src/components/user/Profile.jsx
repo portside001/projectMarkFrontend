@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, use } from "react";
+import React from "react";
 import useDropDown from "../../hook/useDropDown";
 
 export const Profile = () => {
@@ -18,7 +18,7 @@ export const Profile = () => {
           <span className="absolute -inset-1.5"></span>
           <span className="sr-only">Open user menu</span>
           <img
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            src="https://www.clipartmax.com/png/middle/344-3447146_references-dun-rite-i-person-icon-png.png"
             alt=""
             className="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10"
           />

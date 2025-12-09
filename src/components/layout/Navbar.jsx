@@ -1,12 +1,12 @@
-import React, { useState, useRef, useEffect } from "react";
 import Profile from "../user/Profile";
 import Menu from "./Menu";
+import ERP from "../../assets/icons/ERP.logo.png";
 
-const Navbar = ({isOpen , toggleSidebar}) => {
+const Navbar = ({ isOpen, toggleSidebar }) => {
   console.log("Navbar props:", { isOpen, toggleSidebar });
   return (
     <>
-      <nav className="relative bg-[#22AA86] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#22AA86] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
         <div className="mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -40,15 +40,11 @@ const Navbar = ({isOpen , toggleSidebar}) => {
               </button>
             </div>
             <div className="mr-4">
-              <Menu isOpen={isOpen} toggleSidebar={toggleSidebar}/>
+              <Menu isOpen={isOpen} toggleSidebar={toggleSidebar} />
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex shrink-0 items-center">
-                <img
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Your Company"
-                  className="h-8 w-auto"
-                />
+                <img src={ERP} alt="ERP" className="h-12 w-auto" />
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -69,39 +65,8 @@ const Navbar = ({isOpen , toggleSidebar}) => {
                   <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                 </svg>
               </button>
-              <Profile/>
+              <Profile />
             </div>
-          </div>
-        </div>
-
-        <div id="mobile-menu" hidden className="block sm:hidden">
-          <div className="space-y-1 px-2 pt-2 pb-3">
-            {/* <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" --> */}
-            <a
-              href="#"
-              aria-current="page"
-              className="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white"
-            >
-              Dashboard
-            </a>
-            <a
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
-            >
-              Team
-            </a>
-            <a
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
-            >
-              Projects
-            </a>
-            <a
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
-            >
-              Calendar
-            </a>
           </div>
         </div>
       </nav>
