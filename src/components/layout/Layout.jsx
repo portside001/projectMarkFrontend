@@ -1,22 +1,34 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./NavBar";
 import Sidebar from "./Sidebar";
-import { SidebarProvider } from "./SidebarContext";
+import { SidebarProvider, SidebarContext } from "./SidebarContext";
+import { useContext } from "react";
 
-const Layout = ({ children }) => {
+const LayoutContent = () => {
+  const { isOpen } = useContext(SidebarContext);
+
   return (
     <>
-      <SidebarProvider>
-        <Navbar />
-        <div className="flex">
-          <Sidebar />
-          <main>
-            <Outlet />
-          </main>
-        </div>
-      </SidebarProvider>
+      <Navbar />
+      <div className="flex">
+        <Sidebar />
+        <main
+          className={`
+            flex-1 transition-all duration-300 ease-in-out pt-16
+            ${isOpen ? "ml-70" : "ml-0"}
+          `}
+        >
+          <Outlet />
+        </main>
+      </div>
     </>
   );
 };
 
-export default Layout;
+export const Layout = () => {
+  return (
+    <SidebarProvider>
+      <LayoutContent />
+    </SidebarProvider>
+  );
+};

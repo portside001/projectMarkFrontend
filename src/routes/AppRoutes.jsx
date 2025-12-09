@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import Login from "../pages/login";
+import Login from "../pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
-import Layout from "../components/layout/Layout";
+import { Layout } from "../components/layout/Layout";
 import { protectedRoutes } from "./Routes";
-
 
 const AppRoutes = () => {
   return (
@@ -12,7 +11,7 @@ const AppRoutes = () => {
       <Route path="/" element={<Login />}></Route>
       {/* PRIVATE ROUTES */}
       <Route
-        path="/dashboard"
+        path="/"
         element={
           <ProtectedRoute>
             <Layout />
