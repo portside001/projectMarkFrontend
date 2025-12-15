@@ -3,14 +3,14 @@ export default function Card({ image, text, alt }) {
     <div
       className="
         w-full
-        sm:w-64
+        h-full
         aspect-square
         p-4 
-        bg-[#f3f3f7]
+        bg-white
         shadow-lg
         rounded-xl
+        border-gray-100
         border-2
-        border-transparent
         hover:border-blue-500
         hover:scale-102
         transition-all 

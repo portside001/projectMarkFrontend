@@ -3,7 +3,6 @@ import Menu from "./Menu";
 import ERP from "../../assets/icons/ERP.logo.png";
 
 const Navbar = ({ isOpen, toggleSidebar }) => {
-  console.log("Navbar props:", { isOpen, toggleSidebar });
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#22AA86] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
