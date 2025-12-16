@@ -1,0 +1,48 @@
+import { Users, Building2, UserCheck, UserX } from "lucide-react";
+
+export const stats = [
+  {
+    icon: Users,
+    title: "Total Employees",
+    subtitle: "Employee count includes all staff",
+    value: "183",
+    trend: "+10%",
+    trendLabel: "vs Last Year",
+    trendPositive: true,
+    bgColor: "bg-purple-50",
+    iconColor: "text-purple-600",
+  },
+  {
+    icon: Building2,
+    title: "Departments",
+    subtitle: "Total divisions in the company",
+    value: "8",
+    trend: "+15%",
+    trendLabel: "vs Last Year",
+    trendPositive: true,
+    bgColor: "bg-blue-50",
+    iconColor: "text-blue-600",
+  },
+  {
+    icon: UserCheck,
+    title: "Today Presents",
+    subtitle: "Total present employees",
+    value: "178",
+    trend: "+20%",
+    trendLabel: "vs Yesterday",
+    trendPositive: true,
+    bgColor: "bg-green-50",
+    iconColor: "text-green-600",
+  },
+  {
+    icon: UserX,
+    title: "Today Absents",
+    subtitle: "Total people absents today",
+    value: "5",
+    trend: "-20%",
+    trendLabel: "vs Yesterday",
+    trendPositive: false,
+    bgColor: "bg-red-50",
+    iconColor: "text-red-600",
+  },
+];

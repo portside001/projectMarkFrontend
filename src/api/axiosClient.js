@@ -1,5 +1,5 @@
 import axios from "axios";
-import {baseUrl} from "../utils/baseUrl";
+import { baseUrl } from "../utils/baseUrl";
 
 const axiosClient = axios.create({
   baseURL: `${baseUrl}`,
@@ -20,10 +20,13 @@ axiosClient.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-axiosClient.interceptors.response.use((response) => {
-  return response.data;
-}, (error) => {
-  return Promise.reject(error);
-});
+axiosClient.interceptors.response.use(
+  (response) => {
+    return response.data;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export default axiosClient;
